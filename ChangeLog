@@ -1,4 +1,15 @@
+AGRESS (https://github.com/Sound-Linux-More/agress)
 
-2004-12-01  Alexandr Simakov  <xander@entropyware.info>
+0.1.3  (2019-07-14)  zvezdochiot
 
-    * Init version 0.1.1.
+    Check Version:
+    * cppcheck
+    * astyle --style=allman
+
+0.1.2  (2018-06-25)  zvezdochiot
+
+    * Library Version
+
+0.1.1  (2004-12-01)  Alexandr Simakov  <xander@entropyware.info>
+
+    * Init version.

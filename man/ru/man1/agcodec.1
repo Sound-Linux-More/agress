@@ -5,19 +5,24 @@
 .\" http://www.entropyware.info
 .\" xander@entropyware.info
 .\"
-.TH "AGCODEC" "1" "Декабрь 2004" "AGCODEC(1)" "AGRESS - прогрессивный аудио кодер"
+
+.TH "AGCODEC" "1" "14 Июля 2019" "AGCODEC(1)" "Руководство Пльзователя"
+
 .SH "ИМЯ"
 .LP
 agcodec \- прогрессивный аудио кодер
+
 .SH "СИНТАКСИС"
 .LP
 agcodec [\fBОПЦИИ...\fR]
+
 .SH "ОПИСАНИЕ"
 .LP
 Данная программа позволяет кодировать и декодировать аудио файлы
 формата agress (proGRESSive Audio). Исходные файлы должны быть
 в формате wav: 8 либо 16 бит, стерео либо моно режим, частота
 дискретизации \- любая.
+
 .SH "ОПЦИИ"
 .LP
 .TP
@@ -66,12 +71,15 @@ agcodec [\fBОПЦИИ...\fR]
 .TP
 \fB\-\-usage\fR
 Краткое описание опций
+
 .SH "ПРИМЕРЫ"
 .LP
 agcodec \-e \-i test.wav \-o test.agress \-r 8.0
+
 .SH "АВТОР"
 .LP
 Александр Симаков <xander@entropyware.info>
+
 .SH "СМОТРИ ТАКЖЕ"
 .LP
 agplay(1).

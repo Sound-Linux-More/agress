@@ -1,0 +1,84 @@
+.\"
+.\" AGRESS - progressive audio coder
+.\" Copyleft (C) 2004 Alexander Simakov
+.\"
+.\" http://www.entropyware.info
+.\" xander@entropyware.info
+.\"
+
+.TH "AGCODEC" "1" "14 Jul 2019" "AGCODEC(1)" "User Manual"
+
+.SH NAME
+.LP
+agcodec \- progressive audio coder
+
+.SH SYNOPSIS
+.LP
+agcodec [\fB[options]\fR]
+
+.SH DESCRIPTION
+.LP
+This program allows you to encode and decode audio files format agress
+(proGRESSive Audio). Source files must be in the format wav: 8 or
+16 bits, stereo or mono mode, sampling frequency \- any.
+
+.SH OPTIONS
+.LP
+.TP
+\fB\-e, \-\-encode\fR
+Encode file.
+.TP
+\fB\-d, \-\-decode\fR
+Decode file.
+.TP
+\fB\-i, \-\-input\fR=NAME FILE
+The name of the source file.
+.TP
+\fB\-o, \-\-output\fR=NAME FILE
+The name of the target file.
+.TP
+\fB\-r, \-\-ratio\fR=VALUE
+Compression ratio.
+Default 4.0
+.TP
+\fB\-f, \-\-frame\fR=VALUE
+Frame size: power of two.
+The default is 1024.
+.TP
+\fB\-h, \-\-smooth\fR=VALUE
+Window length for smoothing frame boundaries.
+The default is 5.
+.TP
+\fB\-m, \-\-mono\fR
+Convert stereo to mono before compression.
+.TP
+\fB\-s, \-\-stereo\fR
+Compress both stereo channels independently.
+.TP
+\fB\-j, \-\-jstereo\fR
+Use joint stereo mode.
+This mode is used by default.
+.TP
+\fB\-R, \-\-mid\-side\-ratio\fR
+Percentage ratio in which it is necessary to divide the bit budget
+between the mid and side channels. Valid only when joint stereo mode
+is used.
+By default, 70.0 percent.
+.TP
+\fB\-?, \-\-help\fR
+This help
+.TP
+\fB\-\-usage\fR
+Brief description of options
+
+.SH EXAMPLE
+.LP
+agcodec \-e \-i test.wav \-o test.agress \-r 8.0
+
+.SH AUTHORS
+.LP
+АAlexander Simakov <xander@entropyware.info>
+
+.SH SEE ALSO
+.LP
+agplay(1).
