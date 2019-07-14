@@ -350,6 +350,10 @@ encode_s8m ()
         fwrite (&real_size, 1, sizeof (real_size), agress);
         fwrite (out_buf, 1, real_size, agress);
     }
+    g_free(in_buf);
+    g_free(in_left);
+    g_free(in_right);
+    g_free(out_buf);
 }
 
 void
@@ -410,6 +414,10 @@ encode_s8s ()
         fwrite (&real_size, 1, sizeof (real_size), agress);
         fwrite (out_buf, 1, real_size, agress);
     }
+    g_free(in_buf);
+    g_free(in_left);
+    g_free(in_right);
+    g_free(out_buf);
 }
 
 void
@@ -477,6 +485,10 @@ encode_s8j ()
         fwrite (&real_size, 1, sizeof (real_size), agress);
         fwrite (out_buf, 1, real_size, agress);
     }
+    g_free(in_buf);
+    g_free(in_left);
+    g_free(in_right);
+    g_free(out_buf);
 }
 
 void
@@ -533,6 +545,10 @@ encode_s16m ()
         fwrite (&real_size, 1, sizeof (real_size), agress);
         fwrite (out_buf, 1, real_size, agress);
     }
+    g_free(in_buf);
+    g_free(in_left);
+    g_free(in_right);
+    g_free(out_buf);
 }
 
 void
@@ -593,6 +609,10 @@ encode_s16s ()
         fwrite (&real_size, 1, sizeof (real_size), agress);
         fwrite (out_buf, 1, real_size, agress);
     }
+    g_free(in_buf);
+    g_free(in_left);
+    g_free(in_right);
+    g_free(out_buf);
 }
 
 void
@@ -660,6 +680,10 @@ encode_s16j ()
         fwrite (&real_size, 1, sizeof (real_size), agress);
         fwrite (out_buf, 1, real_size, agress);
     }
+    g_free(in_buf);
+    g_free(in_left);
+    g_free(in_right);
+    g_free(out_buf);
 }
 
 void
@@ -745,6 +769,10 @@ decode_8m ()
     w_hdr.len_data = f_size - 44;
 
     fwrite (&w_hdr, 1, sizeof (w_hdr), wav);
+
+    g_free(in_buf);
+    g_free(out_buf1);
+    g_free(out_buf2);
 }
 
 void
@@ -892,6 +920,13 @@ decode_8s ()
     w_hdr.len_data = f_size - 44;
 
     fwrite (&w_hdr, 1, sizeof (w_hdr), wav);
+
+    g_free(in_buf);
+    g_free(out_buf);
+    g_free(out_buf1);
+    g_free(out_buf2);
+    g_free(out_buf3);
+    g_free(out_buf4);
 }
 
 void
@@ -1039,6 +1074,13 @@ decode_8j ()
     w_hdr.len_data = f_size - 44;
 
     fwrite (&w_hdr, 1, sizeof (w_hdr), wav);
+
+    g_free(in_buf);
+    g_free(out_buf);
+    g_free(out_buf1);
+    g_free(out_buf2);
+    g_free(out_buf3);
+    g_free(out_buf4);
 }
 
 void
@@ -1124,6 +1166,10 @@ decode_16m ()
     w_hdr.len_data = f_size - 44;
 
     fwrite (&w_hdr, 1, sizeof (w_hdr), wav);
+
+    g_free(in_buf);
+    g_free(out_buf1);
+    g_free(out_buf2);
 }
 
 void
@@ -1271,6 +1317,13 @@ decode_16s ()
     w_hdr.len_data = f_size - 44;
 
     fwrite (&w_hdr, 1, sizeof (w_hdr), wav);
+
+    g_free(in_buf);
+    g_free(out_buf);
+    g_free(out_buf1);
+    g_free(out_buf2);
+    g_free(out_buf3);
+    g_free(out_buf4);
 }
 
 void
@@ -1422,6 +1475,13 @@ decode_16j ()
     w_hdr.len_data = f_size - 44;
 
     fwrite (&w_hdr, 1, sizeof (w_hdr), wav);
+
+    g_free(in_buf);
+    g_free(out_buf);
+    g_free(out_buf1);
+    g_free(out_buf2);
+    g_free(out_buf3);
+    g_free(out_buf4);
 }
 
 void
