@@ -3,5 +3,5 @@
 AUTOMAKE_OPTIONS = foreign 1.4
 
 SUBDIRS = src man
-INCLUDES = -I$(top_srcdir)/src
+AM_CPPFLAGS = -I$(top_srcdir)/src
 EXTRA_DIST = ChangeLog README AUTHORS COPYING INSTALL

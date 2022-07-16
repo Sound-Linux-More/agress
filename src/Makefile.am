@@ -1,7 +1,7 @@
 bin_PROGRAMS = agcodec agplay
 
 # set the include path found by configure
-INCLUDES = `pkg-config glib-2.0 --cflags` $(all_includes)
+AM_CPPFLAGS = -DGLIB_COMPILATION `pkg-config glib-2.0 --cflags` $(all_includes)
 
 # the library search path.
 lib_LTLIBRARIES = libagress.la
